@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ListaComponent implements OnInit {
   propertyToCheck=1;
   boolToCheck=true;
+  fechaInicio= new Date(2022,4,20);
   estudiantes=[
     {
       nombre: 'Camila Gonzales',

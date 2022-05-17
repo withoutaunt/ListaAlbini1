@@ -12,7 +12,11 @@
     <div *ngFor="let estudiante of estudiantes">
         <p [ngClass]="estudiante.nota>4 ? 'aprobo' : 'reprobo'">
             {{estudiante.nombre}}. Nota: {{estudiante.nota}}
+           
         </p>
+        <div>
+           Fecha de inicio de cursada: {{fechaInicio | date }}
+        </div>
     </div>
 
 </body>
