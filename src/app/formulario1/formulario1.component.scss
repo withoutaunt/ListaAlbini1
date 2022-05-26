@@ -1,9 +1,19 @@
 $bgcolor: rgb(0, 95, 127);
 $textcolor: darkblue;
-$fontsize: 20px;
+$fontsize: 10px;
+
 
 .formulario {
-    background: url('https://img.freepik.com/free-vector/back-school-doodle-sketch-cartoon-seamless-pattern_221062-914.jpg?w=2000') no-repeat center center fixed;
-  color: $textcolor;
+    color: $textcolor;
   font-size: $fontsize;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  width: 450px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(70, 127, 249, 0.635);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(5, 1, 240, 0.437);
+  border-radius: 10px;
 }

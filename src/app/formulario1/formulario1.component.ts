@@ -14,7 +14,7 @@ export class Formulario1Component implements OnInit {
 
   ngOnInit(): void {
     this.formularioContacto=this.fb.group({
-      nombre: ['', [Validators.required, Validators.minLength(10)]],
+      nombre: ['', [Validators.required, Validators.minLength(5)]],
       email: ['', [Validators.required, Validators.email]],
       mensaje: ['', [Validators.required, Validators.maxLength(150)]]
     });
