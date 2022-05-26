@@ -1,1 +1,15 @@
-<p>formulario1 works!</p>
+<form [formGroup]="formularioContacto" (ngSubmit)="submit()">
+    <input type="text" formControlName="nombre" required>
+    <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['required']">(El nombre no puede quedar vacío)</span>
+    <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['minlength']">(Como mínimo 10 caracteres)</span>
+    <input type="text" formControlName="mail">
+    <span *ngIf="this.formularioContacto.get('mail')?.errors?.['required']">(El mail no puede quedar vacío)</span>
+    <span *ngIf="this.formularioContacto.get('mail')?.errors?.['email']">(El mail no es válido)</span>
+    <textarea rows="10" cols="70" formControlName="mensaje"></textarea>
+    <div *ngIf="this.formularioContacto.get('mensaje')?.errors?.['required']">(El mensaje no puede quedar vacío)</div>
+    <div *ngIf="this.formularioContacto.get('mensaje')?.errors?.['maxlength']">(Como máximo 150 caracteres)</div>
+    <button type="submit">Confirmar</button>
+</form>
+<div>
+    {{formularioContacto.value | json }}
+</div>
