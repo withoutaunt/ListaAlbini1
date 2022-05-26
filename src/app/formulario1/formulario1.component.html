@@ -1,16 +1,17 @@
-<div class="formulario">
-    <form class="formBox" [formGroup]="formularioContacto" (ngSubmit)="submit()">
-        <input type="text" formControlName="nombre" required>
-        <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['required']">(Ingresar nombre y apellido)</span>
-        <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['minlength']">(No puede tener menos de 5 caracteres)</span>
-        <input type="text" formControlName="email">
-        <span *ngIf="formularioContacto.get('email')?.errors?.['email']">(El mail no es válido)</span>
-        <textarea rows="10" cols="70" formControlName="mensaje"></textarea>
-        <div *ngIf="this.formularioContacto.get('mensaje')?.errors?.['required']">(Ingresa tu mensaje)</div>
-        <div *ngIf="this.formularioContacto.get('mensaje')?.errors?.['maxlength']">(Como máximo 150 caracteres)</div>
-        <button type="submit" class="btn btn-outline-info">Send</button>
-    </form>
-    <div>
-        {{formularioContacto.value | json }}
-    </div>
-</div>    
+ <body>       
+    <div class="formulario">
+        <form class="formBox" [formGroup]="formularioContacto" (ngSubmit)="submit()">
+            <input type="text" formControlName="nombre" required>
+            <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['required']"> Ingresar nombre y apellido</span>
+            <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['minlength']">No puede tener menos de 5 caracteres</span>
+            <input type="text" formControlName="email" required>
+            <span *ngIf="formularioContacto.get('email')?.errors?.['required']"> Ingresar mail</span>
+            <span *ngIf="formularioContacto.get('email')?.errors?.['email']">El mail no es válido</span>
+            <textarea rows="10" cols="70" formControlName="mensaje"></textarea>
+            <div *ngIf="this.formularioContacto.get('mensaje')?.errors?.['required']">Ingresa tu mensaje</div>
+            <div *ngIf="this.formularioContacto.get('mensaje')?.errors?.['maxlength']">Maximo 150 caracteres</div>
+            <button type="submit" class="btn btn-outline-info">Send</button>
+        </form>
+
+    </div>    
+</body>
