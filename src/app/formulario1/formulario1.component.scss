@@ -1,13 +1,7 @@
-$bgcolor: rgb(0, 95, 127);
 $textcolor: darkblue;
 $fontsize: 10px;
 
-body{
-background-color: rgb(141, 232, 232);
-}
-
 .formulario {
-    color: $textcolor;
   font-size: $fontsize;
   position: absolute;
   top: 80%;
@@ -15,8 +9,9 @@ background-color: rgb(141, 232, 232);
   width: 450px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(70, 127, 249, 0.145);
+  background: rgba(70, 127, 249, 0.635);
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(5, 1, 240, 0.437);
+  box-shadow: 0 15px 25px rgba(5, 1, 240, 0.834);
   border-radius: 10px;
 }
+
